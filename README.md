@@ -46,10 +46,12 @@ This project is a simple blog post web application where you can create, edit, a
   4. Start the server using nodemon:
 
     * nodemon index.js
-    * If nodemon is not installed, install using:
-      * npm install -g nodemon
+   
+  5. If nodemon is not installed, install using:
+      
+     * npm install -g nodemon
 
-  5. Open your browser and go to http://localhost:3000 to view the app.
+  6. Open your browser and go to http://localhost:3000 to view the app.
 
 # Contributions
 Feel free to contribute to this project by submitting issues or pull requests. All contributions are welcome!
