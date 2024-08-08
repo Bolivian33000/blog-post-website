@@ -48,7 +48,7 @@ This project is a simple blog post web application where you can create, edit, a
     * nodemon index.js
   5. If nodemon is not installed, install using:
 
-    * nodemon index.js
+    * npm install nodemon
     
   6. Open your browser and go to http://localhost:3000 to view the app.
 
