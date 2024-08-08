@@ -1,0 +1,79 @@
+<%- include("partials/header.ejs") %> <!-- Includes the header partial, which typically contains the head section with meta tags, title, and linked stylesheets -->
+
+<body class="background"> <!-- Starts the body section with a class of "background" -->
+
+    <!-- Form to create a new post -->
+    <div>
+        <form class="post_input" action="/create_post" method="POST"> <!-- Form to create a new post, using the POST method -->
+            <label class="title anything_text_or_boxes" for="title">Title:</label> <!-- Label for the title input -->
+            <input class="anything_text_or_boxes" type="text" id="title" name="title" required><br><br> <!-- Text input for the title with required validation -->
+            <label class="anything_text_or_boxes" for="content">Content:</label><br> <!-- Label for the content textarea -->
+            <textarea class="anything_text_or_boxes" id="content" name="content" rows="4" cols="50" required></textarea><br><br> <!-- Textarea for the content with required validation -->
+
+            <button class="anything_text_or_boxes buttons" type="submit">Submit</button> <!-- Submit button for the form -->
+        </form>
+    </div>
+
+    <!-- If blogPosts array exists and its length is greater than 0, display "What's new?" followed by each blog post.
+         In a forEach loop, display each title and content in an h2 and p tag, respectively. -->
+    <% if (locals.blogPosts && locals.blogPosts.length > 0) { %>
+        <h1 class="anything_text_or_boxes">What's new?</h1> <!-- Header for the blog posts section -->
+        <!-- lists the title and content attributed to each post -->
+        <hr>
+        <% locals.blogPosts.forEach(post => { %> <!-- Loop through each blog post in the blogPosts array -->
+            <div class="post">
+                <div class="container_for_posts">
+                    <h2 class="anything_text_or_boxes"><%= "Title: " + post.title %></h2> <!-- Display the title of the post -->
+                    <p class="anything_text_or_boxes"><%= post.content %></p> <!-- Display the content of the post -->
+                </div>
+
+                <!-- Edit Form: Displays a form for editing the title and content of the post -->
+                <form action="/edit/<%= post.id %>?_method=PUT" method="POST" style="display: inline;"> <!-- Form to edit the post, using the PUT method (simulated with methodOverride) -->
+                    <div class="form-group">
+                        <div class="edit-container">
+                            <label class="edit_my_title anything_text_or_boxes" for="title-<%= post.id %>">Edit Title:</label> <!-- Label for the edit title input -->
+                        </div>
+                        <input class="anything_text_or_boxes" type="text" id="title-<%= post.id %>" name="title" value="<%= post.title %>" required> <!-- Text input is pre-filled with the current title -->
+                    </div>
+                    <div class="form-group">
+                        <div class="edit-container">
+                            <label class="anything_text_or_boxes form_item" for="edit_content-<%= post.id %>">Edit Content:</label> <!-- Label for the edit content textarea -->
+                        </div>
+                        <textarea class="anything_text_or_boxes form_item" id="edit_content-<%= post.id %>" name="edit_content" rows="4" required><%= post.content %></textarea> <!-- Textarea is pre-filled with the current content -->
+                    </div>
+                    <div class="button-group">
+                        <button class="anything_text_or_boxes button-group buttons" type="submit">Edit</button> <!-- Submit button for the edit form -->
+                    </div>
+                </form>
+
+                <!-- Delete Form: Displays a button for deleting the post -->
+                <form action="/delete/<%= post.id %>?_method=DELETE" method="POST" style="display: inline;"> <!-- Form to delete the post, using the DELETE method (simulated with methodOverride) -->
+                    <div class="button-group">
+                        <button class="anything_text_or_boxes buttons" type="submit">Delete</button> <!-- Submit button for the delete form -->
+                    </div>
+                </form>
+            </div>
+            <hr>
+        <% }) %>
+
+    <!-- Otherwise, display "Tell us your thoughts!" -->
+    <% } else { %>
+        <div class="tell_us_thoughts">
+            <h1 class="anything_text_or_boxes">Tell us your thoughts!</h1> <!-- Default message when there are no blog posts or submit button is not pressed -->
+        </div>
+    <% } %>
+
+</div>
+
+<!-- Add Footer -->
+<%- include("partials/footer.ejs") %> <!-- Includes the footer partial -->
+
+</body>
+</html>
+
+
+
+<!-- miscellanenous comments while debugging: -->
+<!--Use POST to /Posts/{postId}/Comments to create a new comment, since the client doesn't know the {commentId} in advance.
+    Use PUT /Posts/{postId}/Comments/{commentId} to completely update a comment (or perhaps POST when appending text to it).-->
+<!-- There is a big issue here -- I need to figure out how to add the new posts to my website from the blogPosts array-->

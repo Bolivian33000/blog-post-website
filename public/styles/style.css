@@ -1,0 +1,118 @@
+/* Adds padding around the post input form */
+.post_input {
+    padding: 20px;
+  }
+  
+  /* Styles for the body element */
+  body {
+    font-family: 'Arial', sans-serif; /* Sets the font family for the entire document */
+    background-color: #f4f4f9; /* Light grey background color */
+    color: #333; /* Dark grey text color */
+    margin: 0; /* Removes default margin */
+    padding: 20px; /* Adds padding around the body */
+  }
+  
+  /* Styles for h1 and h2 headers */
+  h1, h2 {
+    color: #333; /* Dark grey text color */
+  }
+  
+  /* General form styling */
+  form {
+    background-color: #fff; /* White background for forms */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below forms */
+  }
+  
+  /* Bold labels within forms */
+  form label {
+    font-weight: bold;
+  }
+  
+  /* Styles for input, textarea, and button elements within forms */
+  form input, form textarea, form button {
+    display: block; /* Ensures elements are block-level */
+    width: 100%; /* Full width of the container */
+    margin: 10px 0; /* Vertical margin */
+    padding: 10px; /* Padding inside the elements */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light grey border */
+  }
+  
+  /* Specific button styling within forms */
+  form button {
+    background-color: #333; /* Black background */
+    color: #fff; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* Removes default border */
+  }
+  
+  /* Button hover effect */
+  form button:hover {
+    background-color: #555; /* Dark grey background when hovered over */
+  }
+  
+  /* Styles for the container holding the posts */
+  .container_for_posts {
+    background-color: #fff; /* White background */
+    padding: 20px; /* Padding inside the container */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below each post */
+    word-wrap: break-word; /* Ensures long words break to the next line */
+    overflow-wrap: break-word; /* Ensures long words break to the next line */
+    max-width: 600px; /* Maximum width of the container */
+  }
+  
+  /* Styles for h2 headers within the post container */
+  .container_for_posts h2 { 
+    color: #333; /* Dark grey text color */
+  }
+  
+  /* Styles for paragraph text within the post container */
+  .container_for_posts p { 
+    color: #555; /* Medium grey text color */
+  }
+  
+  /* Flexbox layout for form groups */
+  .form-group {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  
+  /* Adds margin to the right of form group labels */
+  .form-group label {
+    margin-right: 10px;
+  }
+  
+  /* Button styling for form actions */
+  .form-actions button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* Removes default border */
+    padding: 10px 15px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right: 10px; /* Margin to the right of the button */
+  }
+  
+  /* Styles for the "Tell us your thoughts" section */
+  .tell_us_thoughts {
+    text-align: center; /* Centers the text */
+    font-style: italic; /* Italicizes the text */
+    color: #888; /* Light grey text color */
+  }
+  
+  /* Resets border and outline for form and div elements */
+  form, div, input, textarea, button {
+    border: none; /* Removes any borders */
+    outline: none; /* Removes any outlines */
+  }
+  
+  /* Prevents wrapping inside the edit-container */
+  .edit-container {
+    white-space: nowrap;
+  }
+  
