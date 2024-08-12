@@ -37,7 +37,7 @@ This project is a simple blog post web application where you can create, edit, a
 
   2. Navigate to the project directory:
 
-    * cd blog-post-project
+    * cd blog-post-website
 
   3. Install dependencies:
 
