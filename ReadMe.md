@@ -33,7 +33,7 @@ This project is a simple blog post web application where you can create, edit, a
 # Setup and Installation
   1. Clone the repository:
 
-    * git clone https://github.com/Bolivian33000/blog-post-website.git
+    * git clone -b master --single-branch https://github.com/Bolivian33000/blog-post-website.git
 
   2. Navigate to the project directory:
 
