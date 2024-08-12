@@ -22,13 +22,7 @@ This project is a simple blog post web application where you can create, edit, a
  4. Delete a Post:
     * Click the "Delete" button to remove the post from the website.
 # Technologies Used
-* Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine.
-* Express.js: A web application framework for Node.js.
-* EJS: Embedded JavaScript templating for rendering HTML.
-* HTML: Standard markup language for creating web pages.
-* CSS: Style sheet language used for describing the presentation of a document.
-* JavaScript: Programming language that enables dynamic behavior on web pages.
-* Partials: Reusable EJS components for consistent headers and footers.
+* Node.js, Express.js, EJS, HTML, CSS, JavaScript, use of partials
 
 # Setup and Installation
   1. Clone the repository:
