@@ -41,12 +41,14 @@
   }
   
   /* Specific button styling within forms */
+
   form button {
-    background-color: #333; /* Black background */
-    color: #fff; /* White text */
-    cursor: pointer; /* Pointer cursor on hover */
-    border: none; /* Removes default border */
-  }
+    background-color: #007bff; 
+    color: #ffffff; 
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
   
   /* Button hover effect */
   form button:hover {
@@ -64,12 +66,14 @@
     overflow-wrap: break-word; /* Ensures long words break to the next line */
     max-width: 600px; /* Maximum width of the container */
   }
-  
+
   /* Styles for h2 headers within the post container */
   .container_for_posts h2 { 
     color: #333; /* Dark grey text color */
   }
   
+
+
   /* Styles for paragraph text within the post container */
   .container_for_posts p { 
     color: #555; /* Medium grey text color */
@@ -89,7 +93,7 @@
   
   /* Button styling for form actions */
   .form-actions button {
-    background-color: #007bff; /* Blue background */
+    background-color: #0861c1; /* Blue background */
     color: white; /* White text */
     border: none; /* Removes default border */
     padding: 10px 15px; /* Padding inside the button */
@@ -97,6 +101,8 @@
     cursor: pointer; /* Pointer cursor on hover */
     margin-right: 10px; /* Margin to the right of the button */
   }
+
+  
   
   /* Styles for the "Tell us your thoughts" section */
   .tell_us_thoughts {
