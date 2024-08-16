@@ -22,35 +22,26 @@ This project is a simple blog post web application where you can create, edit, a
  4. Delete a Post:
     * Click the "Delete" button to remove the post from the website.
 # Technologies Used
-* Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine.
-* Express.js: A web application framework for Node.js.
-* EJS: Embedded JavaScript templating for rendering HTML.
-* HTML: Standard markup language for creating web pages.
-* CSS: Style sheet language used for describing the presentation of a document.
-* JavaScript: Programming language that enables dynamic behavior on web pages.
-* Partials: Reusable EJS components for consistent headers and footers.
+* Node.js, Express.js, EJS, HTML, CSS, JavaScript, use of partials
 
 # Setup and Installation
   1. Clone the repository:
 
-    * git clone https://github.com/yourusername/blog-post-project.git
+    * git clone -b main --single-branch https://github.com/Bolivian33000/blog-post-website.git
 
   2. Navigate to the project directory:
 
-    * cd blog-post-project
+    * cd blog-post-website
 
   3. Install dependencies:
 
     * npm install
 
-  4. Start the server using nodemon:
+  4. Start the server using node command:
 
-    * nodemon index.js
-  5. If nodemon is not installed, install using:
-
-    * npm install nodemon
+    * node index.js
     
-  6. Open your browser and go to http://localhost:3000 to view the app.
+  5. Open your browser and go to http://localhost:3000 to view the app.
 
 # Contributions
 Feel free to contribute to this project by submitting issues or pull requests. All contributions are welcome!
