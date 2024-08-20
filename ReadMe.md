@@ -1,6 +1,6 @@
 blog-post-website
 # Blog Post Project
-This project is a simple blog post web application where you can create, edit, and delete blog posts.
+This project is a blog post web application where you can create, edit, and delete blog posts.
 
 # Features
 * Input the title and content of your post
