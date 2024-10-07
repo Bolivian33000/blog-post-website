@@ -3,6 +3,26 @@
   padding: 20px;
 }
 
+
+
+.copyright {
+  font-family: 'Playfair Display', serif; /* New elegant font */
+
+}
+h1  {
+  font-family: 'Playfair Display', serif; /* New elegant font */
+  font-size: 4rem; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  color: #2c3e50; /* Dark navy color */
+  letter-spacing: 2px; /* Add space between letters */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-align: center; /* Keep text centered */
+}
+
+
+
+
+
 /* Styles for the body element */
 body {
   font-family: 'Arial', sans-serif; /* Sets the font family for the entire document */
@@ -15,11 +35,16 @@ body {
 /* Styles for h1 and h2 headers */
 h1, h2 {
   color: #333; /* Dark grey text color */
+  font-family: 'Playfair Display', serif; /* New elegant font */
+
 }
 
+.italics {
+  font-style: italic;
+}
 /* General form styling */
 form {
-  background-color: #fff; /* White background for forms */
+  background-color: #5e95d3; /* White background for forms */
   border: 1px solid #ccc; /* Light grey border */
   border-radius: 5px; /* Rounded corners */
   margin-bottom: 20px; /* Space below forms */
@@ -27,35 +52,98 @@ form {
 
 /* Bold labels within forms */
 form label {
+  margin-left: 620px;
+  display: inline-block; /* Ensure label takes up full width */
+  text-align: center; /* Centers text horizontally */
+  font-size: 2.2rem; /* Font */
   font-weight: bold;
+  width: 100px; /* Adjust this width based on your needs */
+  margin-right: 10px; /* Add space between label and input 
+  */
+  
 }
+
+.input_title  {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Playfair Display', serif; 
+  color: black;
+
+
+}
+
+.input_content  {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Playfair Display', serif; 
+  color: black;
+
+
+}
+
+.input_edit_title {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Playfair Display', serif; 
+  color: black;
+
+}
+
+.input_edit_content  {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Playfair Display', serif;  
+  color: black;
+
+}
+
+
+.create_post {
+  flex-wrap: nowrap;
+  font-family: 'Playfair Display', serif; 
+  color: black;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+
+
+
 
 /* Styles for input, textarea, and button elements within forms */
 form input, form textarea, form button {
   display: block; /* Ensures elements are block-level */
   width: 100%; /* Full width of the container */
-  margin: 10px 0; /* Vertical margin */
-  padding: 10px; /* Padding inside the elements */
-  border-radius: 5px; /* Rounded corners */
-  border: 1px solid #ccc; /* Light grey border */
+  max-width: 600px; /* Limits the maximum width on larger screens */
+  margin: 10px auto; /* Centers the input and adds vertical margin */
+  padding: 12px 15px; /* Slightly increase the padding for more spacing */
+  border-radius: 8px; /* Slightly more rounded corners for a modern look */
+  border: 1px solid #bbb; /* Softer border color */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+  font-size: 16px; /* Slightly larger font size */
+  font-family: 'Playfair Display', serif; /* New elegant font */
 }
-
 /* Specific button styling within forms */
 
 form button {
-  background-color: #007bff; 
-  color: #ffffff; 
+  background-color: #FFFFFF; 
+  color: black; 
   cursor: pointer;
-  border: none;
+  border: blue;
+
   transition: background-color 0.3s; /* Smooth transition on hover */
 }
 
 /* Button hover effect */
 form button:hover {
-  background-color: #555; /* Dark grey background when hovered over */
+  background-color: #fede2a; /* Dark grey background when hovered over */
 }
 
-/* Styles for the container holding the posts */
+
+/* displays content from posts */
 .container_for_posts {
   background-color: #fff; /* White background */
   padding: 20px; /* Padding inside the container */
@@ -65,6 +153,7 @@ form button:hover {
   word-wrap: break-word; /* Ensures long words break to the next line */
   overflow-wrap: break-word; /* Ensures long words break to the next line */
   max-width: 600px; /* Maximum width of the container */
+  text-align: center
 }
 
 /* Styles for h2 headers within the post container */
@@ -77,13 +166,6 @@ form button:hover {
 /* Styles for paragraph text within the post container */
 .container_for_posts p { 
   color: #555; /* Medium grey text color */
-}
-
-/* Flexbox layout for form groups */
-.form-group {
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 10px;
 }
 
 /* Adds margin to the right of form group labels */
@@ -105,11 +187,7 @@ form button:hover {
 
 
 /* Styles for the "Tell us your thoughts" section */
-.tell_us_thoughts {
-  text-align: center; /* Centers the text */
-  font-style: italic; /* Italicizes the text */
-  color: #888; /* Light grey text color */
-}
+
 
 /* Resets border and outline for form and div elements */
 form, div, input, textarea, button {
@@ -120,4 +198,6 @@ form, div, input, textarea, button {
 /* Prevents wrapping inside the edit-container */
 .edit-container {
   white-space: nowrap;
-}
+} 
+
+
