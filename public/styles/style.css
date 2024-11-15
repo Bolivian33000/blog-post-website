@@ -1,203 +1,142 @@
-/* Adds padding around the post input form */
-.post_input {
-  padding: 20px;
+
+* {
+    box-sizing: border-box;
+    margin: 0 ;
+    padding: 0;/* what this does is resets any default styling the webpage may have */
+    font-family: "Jost", serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>;*/
+    font-style: normal;
+    color: white;
+    transition-duration: 300ms;
+    background-color: #1b263f;;
 }
 
 
-
-.copyright {
-  font-family: 'Playfair Display', serif; /* New elegant font */
-
-}
-h1  {
-  font-family: 'Playfair Display', serif; /* New elegant font */
-  font-size: 4rem; /* Increase font size */
-  font-weight: bold; /* Make it bold */
-  color: #2c3e50; /* Dark navy color */
-  letter-spacing: 2px; /* Add space between letters */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  text-align: center; /* Keep text centered */
+.blog_title {
+    font-family: "Jost", serif;
+    font-size: 6rem; 
+    font-weight: bold; 
+    color: white;
+    letter-spacing: 3px;
+    text-align: center; 
+    margin-top: 0px;
+    user-select: None;
+    
 }
 
-
-
-
-
-/* Styles for the body element */
-body {
-  font-family: 'Arial', sans-serif; /* Sets the font family for the entire document */
-  background-color: #f4f4f9; /* Light grey background color */
-  color: #333; /* Dark grey text color */
-  margin: 0; /* Removes default margin */
-  padding: 20px; /* Adds padding around the body */
+.create_post_container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    padding: 6px;
+    width: 70%;
+    max-width: 500px; 
+    margin: 0 auto; /* centers container horizontally */
+    border: 5px solid;
+    border-color: #f4f4f9;
+    border-radius: 2px;
 }
 
-/* Styles for h1 and h2 headers */
-h1, h2 {
-  color: #333; /* Dark grey text color */
-  font-family: 'Playfair Display', serif; /* New elegant font */
-
+.form_container {
+    display: flex;
+    flex-direction: column;
 }
 
-.italics {
-  font-style: italic;
-}
-/* General form styling */
-form {
-  background-color: #5e95d3; /* White background for forms */
-  border: 1px solid #ccc; /* Light grey border */
-  border-radius: 5px; /* Rounded corners */
-  margin-bottom: 20px; /* Space below forms */
+.create_post_item {
+    padding-left: 6px;
+    font-size: 1.1em;
 }
 
-/* Bold labels within forms */
-form label {
-  margin-left: 620px;
-  display: inline-block; /* Ensure label takes up full width */
-  text-align: center; /* Centers text horizontally */
-  font-size: 2.2rem; /* Font */
-  font-weight: bold;
-  width: 100px; /* Adjust this width based on your needs */
-  margin-right: 10px; /* Add space between label and input 
-  */
-  
-}
 
-.input_title  {
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Playfair Display', serif; 
-  color: black;
+input, textarea {
 
-
-}
-
-.input_content  {
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Playfair Display', serif; 
-  color: black;
-
-
-}
-
-.input_edit_title {
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Playfair Display', serif; 
-  color: black;
-
-}
-
-.input_edit_content  {
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Playfair Display', serif;  
-  color: black;
+    border-radius: 5px;
+    border: 1px solid #f4fdff;
+    background-color: #f4fdff;
+    color: #1b263f;
 
 }
 
 
-.create_post {
-  flex-wrap: nowrap;
-  font-family: 'Playfair Display', serif; 
-  color: black;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-
+button {
+    cursor: pointer;
+    user-select: none;
+    background: white;
+    padding: 2px 6px;
+    gap: 6px; /* does not do anything major */ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #1b263f;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    margin-left: 1px;
 }
 
 
-
-
-
-
-/* Styles for input, textarea, and button elements within forms */
-form input, form textarea, form button {
-  display: block; /* Ensures elements are block-level */
-  width: 100%; /* Full width of the container */
-  max-width: 600px; /* Limits the maximum width on larger screens */
-  margin: 10px auto; /* Centers the input and adds vertical margin */
-  padding: 12px 15px; /* Slightly increase the padding for more spacing */
-  border-radius: 8px; /* Slightly more rounded corners for a modern look */
-  border: 1px solid #bbb; /* Softer border color */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
-  font-size: 16px; /* Slightly larger font size */
-  font-family: 'Playfair Display', serif; /* New elegant font */
-}
-/* Specific button styling within forms */
-
-form button {
-  background-color: #FFFFFF; 
-  color: black; 
-  cursor: pointer;
-  border: blue;
-
-  transition: background-color 0.3s; /* Smooth transition on hover */
+button:hover {
+    transform: scale(1.1);   /* adds a hover effect to increase the size of the div when client hovers */
+    
 }
 
-/* Button hover effect */
-form button:hover {
-  background-color: #fede2a; /* Dark grey background when hovered over */
+.what-is-new  {
+    user-select: None;
+    margin-left: 8px;
 }
 
 
-/* displays content from posts */
-.container_for_posts {
-  background-color: #fff; /* White background */
-  padding: 20px; /* Padding inside the container */
-  border: 1px solid #ccc; /* Light grey border */
-  border-radius: 5px; /* Rounded corners */
-  margin-bottom: 20px; /* Space below each post */
-  word-wrap: break-word; /* Ensures long words break to the next line */
-  overflow-wrap: break-word; /* Ensures long words break to the next line */
-  max-width: 600px; /* Maximum width of the container */
-  text-align: center
-}
-
-/* Styles for h2 headers within the post container */
-.container_for_posts h2 { 
-  color: #333; /* Dark grey text color */
-}
-
-
-
-/* Styles for paragraph text within the post container */
-.container_for_posts p { 
-  color: #555; /* Medium grey text color */
-}
-
-/* Adds margin to the right of form group labels */
-.form-group label {
-  margin-right: 10px;
-}
-
-/* Button styling for form actions */
-.form-actions button {
-  background-color: #0861c1; /* Blue background */
-  color: white; /* White text */
-  border: none; /* Removes default border */
-  padding: 10px 15px; /* Padding inside the button */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  margin-right: 10px; /* Margin to the right of the button */
-}
-
-
-
-/* Styles for the "Tell us your thoughts" section */
-
-
-/* Resets border and outline for form and div elements */
-form, div, input, textarea, button {
-  border: none; /* Removes any borders */
-  outline: none; /* Removes any outlines */
-}
-
-/* Prevents wrapping inside the edit-container */
-.edit-container {
-  white-space: nowrap;
+.created_post_container{
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 10px; 
+    padding: 6px;
+    width: 70%;
+    max-width: 600px; 
+    margin: 10px auto; 
+    border: 5px solid;
+    border-color: #f4f4f9;
+    border-radius: 2px;
 } 
 
+.edit_title  {
+    margin-top: 25px;
+}
 
+
+.textarea_item {
+    width: 50%;
+}
+
+
+.created_post_item {
+    padding-left: 6px;
+    font-size: 1.1em;
+}
+
+.created_post_item > input, .created_post_item > textarea {
+
+    margin-bottom: 22px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    gap: 20px;
+    font-size: 1.2em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer a:hover {
+    transform: rotate(-45deg);
+    opacity: 0.5; /* This allows us to rotate the icon to the left 45 degrees once we hover over each icon */
+}

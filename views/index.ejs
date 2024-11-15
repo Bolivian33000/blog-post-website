@@ -3,69 +3,89 @@
 <body class="background"> <!-- Starts the body section with a class of "background" -->
 
     <!-- Form to create a new post -->
-    <div class = "create_post">
+    <div class = "create_post_container">
+        <div class = "form_container">
             <form class="post_input" action="/create_post" method="POST"> <!-- Form to create a new post, using the POST method -->
-                <label class="input_title" for="title">Title:</label> <!-- Label for the title input -->
-                <input class="" type="text" id="title" name="title" required><br><br> <!-- Text input for the title with required validation -->
-                <label class="input_content" for="content">Text:</label><br> <!-- Label for the content textarea -->
-                <textarea class="" id="content" name="content" rows="4" cols="50" required></textarea><br><br> <!-- Textarea for the content with required validation -->
-
-                <button class=" buttons" type="submit">Submit</button> <!-- Submit button for the form -->
+                <div class = "create_post_item">
+                    <label for="title">Title:</label> <!-- Label for the title input -->
+                </div>
+                <div class = "create_post_item">
+                    <input type="text" id="title" name="title" required><br><br> <!-- Text input for the title with required validation -->
+                </div>
+                <div class = "create_post_item">
+                    <label for="content">Text:</label><br> <!-- Label for the content textarea -->
+                </div>
+                <div class = "create_post_item">
+                    <textarea class = "textarea_item" id="content" name="content" rows="4" cols="50" required></textarea><br><br> <!-- Textarea for the content with required validation -->
+                </div>
+                <div class = "create_post_item">
+                    <button class=" buttons" type="submit">Submit</button> <!-- Submit button for the form -->
+                </div>
             </form>
+        </div>
     </div>
 
     <!-- If blogPosts array exists and its length is greater than 0, display "What's new?" followed by each blog post.
          In a forEach loop, display each title and content in an h2 and p tag, respectively. -->
     <% if (locals.blogPosts && locals.blogPosts.length > 0) { %>
-        <h1 class="">What's new?</h1> <!-- Header for the blog posts section -->
+        <h1 class="what-is-new">What's new?</h1> <!-- Header for the blog posts section -->
         <!-- lists the title and content attributed to each post -->
-        <hr>
-        <% locals.blogPosts.forEach(post => { %> <!-- Loop through each blog post in the blogPosts array -->
-            <div class="post">
-                <div class="container_for_posts">
-                    <h2 class=""><%= post.title %></h2> <!-- Display the title of the post -->
-                    <p class=""><%= post.content %></p> <!-- Display the content of the post -->
-                </div>
-
-                <!-- Edit Form: Displays a form for editing the title and content of the post -->
-                <form action="/edit/<%= post.id %>?_method=PUT" method="POST" style="display: inline;"> <!-- Form to edit the post, using the PUT method (simulated with methodOverride) -->
-                    <div class = "create_post">
-                        <div class="form-group">
-                            <div class="edit-container">
-                                <label class="input_edit_title" for="title-<%= post.id %>">Edit Title:</label> <!-- Label for the edit title input -->
-                            </div>
-                            <input class="" type="text" id="title-<%= post.id %>" name="title" value="<%= post.title %>" required> <!-- Text input is pre-filled with the current title -->
-                        </div>
-                        <div class="form-group">
-                            <div class="edit-container">
-                                <label class="input_edit_content" for="edit_content-<%= post.id %>">Edit Text:</label> <!-- Label for the edit content textarea -->
-                            </div>
-                            <textarea class="form_item" id="edit_content-<%= post.id %>" name="edit_content" rows="4" required><%= post.content %></textarea> <!-- Textarea is pre-filled with the current content -->
-                        </div>
-                        <div class="button-group">
-                            <button class=" button-group buttons" type="submit">Edit</button> <!-- Submit button for the edit form -->
-                        </div>
-                    </div>
-                </form>
-
-                <!-- Delete Form: Displays a button for deleting the post -->
-                <form action="/delete/<%= post.id %>?_method=DELETE" method="POST" style="display: inline;"> <!-- Form to delete the post, using the DELETE method (simulated with methodOverride) -->
-                    <div class="button-group">
-                        <button class=" buttons" type="submit">Delete</button> <!-- Submit button for the delete form -->
-                    </div>
-                </form>
-            </div>
             <hr>
-        <% }) %>
+    
+        
+                <% locals.blogPosts.forEach(post => { %> <!-- Loop through each blog post in the blogPosts array -->
+                    <section id="nth-child-posts">
 
+                        <div class="created_post_container">
+                            <div class = "created_post_sub_container"> 
+                                <div class = "form_container">
+                                    <div class="created_post_item">
+                                        <h2 class=""><%= post.title %></h2> <!-- Display the title of the post -->
+                                    </div>
+                                    <div class="created_post_item">
+                                        <p class=""><%= post.content %></p> <!-- Display the content of the post -->
+                                    </div>
+                                
+
+                                    <!-- displays a form for editing the title and content of the post -->
+                                    <form action="/edit/<%= post.id %>?_method=PUT" method="POST" style="display: inline;"> <!-- Form to edit the post, using the PUT method (simulated with methodOverride) -->
+                                        <div class="created_post_item edit_title">
+                                            <label class="input_edit_title" for="title-<%= post.id %>">Edit Title:</label> <!-- Label for the edit title input -->
+                                        </div>
+                                        <div class="created_post_item">
+                                            <input class="" type="text" id="title-<%= post.id %>" name="title" value="<%= post.title %>" required> <!-- Text input is pre-filled with the current title -->
+                                        </div>
+                                        <div class="created_post_item">
+                                            <label class="input_edit_content" for="edit_content-<%= post.id %>">Edit Text:</label> <!-- Label for the edit content textarea -->
+                                        </div>
+                                        <div class="created_post_item">
+                                            <textarea class="textarea_item" id="edit_content-<%= post.id %>" name="edit_content" rows="4" required><%= post.content %></textarea> <!-- Textarea is pre-filled with the current content -->
+                                        </div>
+                                        <div class="created_post_item">
+                                            <button class=" button-group buttons" type="submit">Edit</button> <!-- Submit button for the edit form -->
+                                        </div>
+                                    </form>
+                                <!-- Delete Form: Displays a button for deleting the post -->
+                                    <form action="/delete/<%= post.id %>?_method=DELETE" method="POST" style="display: inline;"> <!-- Form to delete the post, using the DELETE method (simulated with methodOverride) -->
+                                        <div class="created_post_item">
+                                            <button class=" buttons" type="submit">Delete</button> <!-- Submit button for the delete form -->
+                                        </div>
+                                    </form>
+                                
+                                </div>
+                            </div> 
+                        </div>
+                        <hr>
+                     </section>
+                <% }) %>
+      
+ 
     <!-- Otherwise, display "Tell us your thoughts!" -->
     <% } else { %>
-        <div class="tell_us_thoughts">
-            <h1 class="italics">Tell us your thoughts!</h1> <!-- Default message when there are no blog posts or submit button is not pressed -->
-        </div>
+        <h1 class="what-is-new">Tell us your thoughts!</h1> <!-- Default message when there are no blog posts or submit button is not pressed -->
     <% } %>
 
-</div>
+
 
 <!-- Add Footer -->
 <%- include("partials/footer.ejs") %> <!-- Includes the footer partial -->
